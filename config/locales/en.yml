@@ -170,7 +170,10 @@ en:
       post: " Posted on "
       start: "START AT "
       end: "END AT "
-      comment: "Create a comment"
+
+  comments:
+    form:
+      comment: "Leave a comment"
 
     edit:
       heading: "Edit your event"

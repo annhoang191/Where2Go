@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   get "/contact", to: "static_pages#contact"
+  get "/search", to: "searches#search"
   get "/signup", to: "users#new"
   get "/error", to: "static_pages#error"
   resources :events do
@@ -17,9 +18,10 @@ Rails.application.routes.draw do
   concern :paginatable do
     get "(page/:page)", action: :index, on: :collection, as: ""
   end
-  
+
   namespace :admin do
     resources :users, concerns: :paginatable
   end
 
+  resources :searches
 end

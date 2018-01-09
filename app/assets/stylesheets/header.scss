@@ -27,6 +27,42 @@ button{
   padding: 0;
 }
 
+.search-form {
+  height: 60px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.ui-autocomplete {
+  position: absolute;
+  z-index: 10000;
+  cursor: default;
+  padding: 0;
+  margin-top: 2px;
+  list-style: none;
+  background-color: white;
+  border: 1px solid $silver;
+  li {
+    padding: 3px 20px;
+  }
+
+  li.ui-state-focus {
+    background-color: $alto;
+  }
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
+}
+
+.input-group {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .navbar-nav {
   li {
     a {

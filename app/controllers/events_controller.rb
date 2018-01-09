@@ -9,6 +9,7 @@ class EventsController < ApplicationController
   def show
     @event_categories = @event.event_categories
     @event_owner = @event.user.name
+    @event_owner_id = @event.user.id
     @comments = current_user.comments.build if logged_in?
   end
 
